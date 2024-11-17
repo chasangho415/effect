@@ -42,12 +42,9 @@ class SpecialEffect(QMainWindow):
         fname, _ = QFileDialog.getOpenFileName(self, '사진 읽기', './')
         
         if fname:
-            # np.fromfile을 사용하여 한글 경로 문제 해결
             img_array = np.fromfile(fname, np.uint8)
             self.img = cv.imdecode(img_array, cv.IMREAD_COLOR)
-
-            if self.img is None:
-                sys.exit('이미지를 불러올 수 없습니다.')
+            if self.img is None: sys.exit('파일을 찾을 수 없습니다.')
             
             cv.imshow('Painting', self.img)  
 
