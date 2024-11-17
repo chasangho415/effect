@@ -38,4 +38,4 @@ pip install opencv-python opencv-contrib-python
 pip install numpy
 pip install PyQt6
 pip install pyinstaller
- pyinstaller --onefile --noconsole .py위치
+pyinstaller --onefile --noconsole .py위치
